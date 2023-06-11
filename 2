@@ -1,0 +1,10 @@
+#2Display all the Salespeople whose total order worth is more than Rs. 2000
+SELECT S.*
+FROM SalesPeople AS S
+WHERE EXISTS (
+    SELECT 1
+    FROM Orders AS O
+    WHERE O.Snum = S.Snum
+    GROUP BY O.Snum
+    HAVING SUM(O.Amt) > 2000
+);
