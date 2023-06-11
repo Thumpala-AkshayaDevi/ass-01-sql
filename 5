@@ -1,0 +1,5 @@
+#Display the number of orders taken by each Salesperson and their date of orders
+SELECT S.Sname, COUNT(O.Onum) AS NumberOfOrders, O.Odate
+FROM SalesPeople AS S
+LEFT JOIN Orders AS O ON O.Snum = S.Snum
+GROUP BY S.Snum, S.Sname, O.Odate;
