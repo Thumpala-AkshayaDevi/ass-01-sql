@@ -1,0 +1,4 @@
+#Display the number of Salespeople belonging to London and Paris
+SELECT
+    (SELECT COUNT(*) FROM SalesPeople WHERE City = 'London') AS LondonSalespeople,
+    (SELECT COUNT(*) FROM SalesPeople WHERE City = 'Paris') AS ParisSalespeople;
