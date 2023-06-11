@@ -1,0 +1,4 @@
+#1Count the number of Salespeople whose name begins with 'a' or 'A'
+SELECT COUNT(*) AS NumberOfSalespeople
+FROM SalesPeople
+WHERE UPPER(SUBSTRING(Sname, 1, 1)) = 'A';
